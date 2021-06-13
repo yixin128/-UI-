@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Radmin</title>
+  <link rel="stylesheet" href="radmin/layui/css/layui.css">
+  <link rel="stylesheet" href="radmin/css/style.min.css">
+</head>
+<body>
+
+<ul class="layui-nav" lay-filter="demo" style="border-radius: 0px;background-color: #ffffff;">
+  <li class="layui-nav-item" style="line-height: 70px">
+    <span class="logo-title">系统后台</span>
+  </li>
+  <li class="nav-fold" id="mobiles" style="display:none">
+    <i id="navs" class="layui-icon layui-icon-spread-left icon-color"></i>
+  </li>
+
+  <li class="layui-nav-item nav-header" style="margin: 0;">
+    <a href="javascript:;" style="color: #98a6ad;">
+      <span class="nav-head-img">
+        <img src="http://q1.qlogo.cn/g?b=qq&nk=732279717&s=640" class="nav-img" style="border: solid 2px #ccc">
+      </span>
+      <span class="icon-color">个人信息</span>
+    </a>
+    <dl class="layui-nav-child" style="top: 75px;text-align: center;">
+      <dd><a r-href="javascript:;">修改密码</a></dd>
+      <dd><a r-href="javascript:;">注销登录</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item nav-header" id="assembly1"><a href="https://rauth.cn/" style="padding: 0;"><i class="layui-icon layui-icon-website icon-color"></i></a></li>
+  <li class="layui-nav-item nav-header" id="assembly2"><a r-id="101" r-href="javascript:;" style="padding: 0;"><i class="layui-icon layui-icon-notice icon-color"></i></a></li>
+</ul>
+
+<ul class="layui-nav navbar" lay-filter="demo" id="mobile">
+  <li class="layui-nav-item layui-this"><a r-id="111" r-href="views/home.html">
+    <i class="layui-icon layui-icon-home"></i>
+    <cite>控制首页</cite></a>
+  </li>
+  <li class="layui-nav-item navbar-height">
+    <a href="javascript:;">
+      <i class="layui-icon layui-icon-user"></i>
+      <cite>用户中心</cite>
+    </a>
+    <dl class="layui-nav-child">
+      <dd><a r-id="121" r-href="views/user.html">添加用户</a></dd>
+      <dd><a r-id="122" r-href="javascript:;">用户管理</a></dd>
+      <dd><a r-id="123" r-href="javascript:;">操作日志</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item navbar-height">
+    <a href="javascript:;">
+      <i class="layui-icon layui-icon-key"></i>
+      <cite>卡密中心</cite>
+    </a>
+    <dl class="layui-nav-child">
+      <dd><a r-id="131" r-href="javascript:;">生成卡密</a></dd>
+      <dd><a r-id="132" r-href="javascript:;">卡密管理</a></dd>
+      <dd><a r-id="133" r-href="javascript:;">操作日志</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item navbar-height">
+    <a href="javascript:;">
+      <i class="layui-icon layui-icon-layer"></i>
+      <cite>程序管理</cite>
+    </a>
+    <dl class="layui-nav-child">
+      <dd><a r-id="141" r-href="javascript:;">添加程序</a></dd>
+      <dd><a r-id="142" r-href="javascript:;">程序管理</a></dd>
+      <dd><a r-id="143" r-href="javascript:;">时效管理</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item navbar-height">
+    <a href="javascript:;">
+      <i class="layui-icon layui-icon-diamond"></i>
+      <cite>支付中心</cite>
+    </a>
+    <dl class="layui-nav-child">
+      <dd><a r-id="151" r-href="javascript:;">支付配置</a></dd>
+      <dd><a r-id="152" r-href="javascript:;">支付订单</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item navbar-height">
+    <a href="javascript:;">
+      <i class="layui-icon layui-icon-set"></i>
+      <cite>站点配置</cite>
+    </a>
+    <dl class="layui-nav-child">
+      <dd><a r-id="161" r-href="javascript:;">模板切换</a></dd>
+      <dd><a r-id="162" r-href="javascript:;">应用中心</a></dd>
+      <dd><a r-id="163" r-href="javascript:;">个人信息</a></dd>
+      <dd><a r-id="164" r-href="javascript:;">网站配置</a></dd>
+      <dd><a r-id="165" r-href="javascript:;">系统更新</a></dd>
+    </dl>
+  </li>
+</ul>
+
+<div class="layui-body">
+  <div class="layui-show">
+    <iframe id="iframeMain" src="views/home.html" frameborder="0" class="radmin-iframe"></iframe>
+  </div>
+</div>
+
+<script src="radmin/layui/layui.js"></script>
+<script>
+  layui.config({
+    base: '../radmin/' //静态资源所在路径
+  }).extend({
+    index: 'js/index' //主入口模块
+  }).use(['index']);
+</script>
+</body>
+</html>

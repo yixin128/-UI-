@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../radmin/layui/css/layui.css">
+    <link rel="stylesheet" href="../radmin/css/style.min.css">
+</head>
+<body class="dye-body">
+<h2>测试页面</h2>
+<script src="../radmin/layui/layui.js?t=1"></script>
+<script>
+    layui.config({
+        base: '../radmin/' //静态资源所在路径
+    }).extend({
+        index: 'js/index' //主入口模块
+    }).use(['index']);
+</script>
+</body>
+</html>
